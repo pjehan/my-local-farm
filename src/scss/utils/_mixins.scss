@@ -1,0 +1,10 @@
+@import "hover.css/scss/effects/background-transitions/sweep-to-right";
+@import './variables';
+
+@mixin hover-sweep-to-right($color: $activeColor) {
+  @include sweep-to-right();
+
+  &:before {
+    background-color: $color;
+  }
+}

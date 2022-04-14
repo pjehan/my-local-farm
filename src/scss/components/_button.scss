@@ -1,0 +1,15 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.btn {
+  overflow: hidden;
+  border: none;
+
+  &.btn-primary {
+    @include hover-sweep-to-right($color: $secondary);
+  }
+
+  &.btn-secondary {
+    @include hover-sweep-to-right($color: $primary);
+  }
+}

@@ -1,0 +1,62 @@
+@import "bootstrap/scss/variables";
+@import "../utils/variables";
+@import "./card-category";
+@import "./card-farmer";
+@import "./card-small-post";
+
+.card {
+  .card-img-top {
+    border-radius: $border-radius;
+  }
+
+  .card-img {
+    position: relative;
+
+    &.card-img-with-border {
+      border-bottom: 3px solid $primary;
+
+      .card-img-top {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .card-img-label {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      padding: 0.2rem 1rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+      background-color: $primary;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $secondary;
+
+    .card-icon {
+      width: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      border: 2px solid $primary;
+      border-radius: $border-radius-pill;
+      background-color: $primary;
+      color: $secondary;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    .card-body {
+      .card-icon {
+        background-color: transparent;
+        color: $secondary;
+      }
+    }
+  }
+}

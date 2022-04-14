@@ -1,0 +1,112 @@
+@import "../utils/variables";
+@import "animate-scss/_bouncing-entrances/bounceInUp";
+
+.main-slider {
+  overflow: hidden;
+
+  .slider-home {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        overflow: hidden;
+
+        &.swiper-slide-active {
+          img {
+            transform: scale(1.3);
+          }
+
+          .slide-content {
+            @include bounceInUp();
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 7000ms ease;
+        }
+
+        .slide-content {
+          position: absolute;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          color: white;
+
+          h2 {
+            font-size: 4rem;
+          }
+        }
+
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba($secondary, 0.6);
+        }
+      }
+    }
+
+    .swiper-pagination {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: 100px;
+      bottom: 60px;
+      width: 50px;
+
+      > .swiper-pagination-bullet {
+        margin-bottom: 0.5rem;
+        background-color: white;
+
+        &.swiper-pagination-bullet-active {
+          width: 13px;
+          height: 13px;
+        }
+      }
+    }
+
+    .swiper-navigation-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 1rem;
+      bottom: 1rem;
+      font-size: 2rem;
+      color: white;
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 50px;
+        height: 50px;
+        margin: 0 0 1rem 0;
+        border: 1px solid white;
+        border-radius: 50%;
+        color: white;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

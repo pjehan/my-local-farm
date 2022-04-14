@@ -1,0 +1,14 @@
+@import "../utils/variables";
+
+.main-footer {
+  color: white;
+  background-color: $secondary;
+
+  .footer-logo {
+    font-size: 2rem;
+  }
+
+  .footer-bottom {
+    background-color: $secondary-light;
+  }
+}

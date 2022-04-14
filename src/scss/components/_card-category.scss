@@ -1,0 +1,14 @@
+@import "bootstrap/scss/variables";
+@import "hover.css/scss/effects/shadow-and-glow-transitions/float-shadow";
+@import "../utils/variables";
+
+.card-category {
+  @include float-shadow();
+
+  display: block;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid $secondary;
+  border-radius: $border-radius;
+  text-decoration: none;
+}

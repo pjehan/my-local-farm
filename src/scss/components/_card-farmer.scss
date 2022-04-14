@@ -1,0 +1,13 @@
+@import "hover.css/scss/effects/2d-transitions/float";
+
+.card.card-farmer {
+  @include float();
+
+  .card-body {
+    .card-job {
+      margin: 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+  }
+}

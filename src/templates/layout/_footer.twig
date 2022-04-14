@@ -1,0 +1,53 @@
+<footer class="main-footer">
+    <div class="container">
+        <div class="row pt-5 pb-5">
+            <div class="col-md-3">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-tractor"></i>
+                </div>
+                My Local Farm
+            </div>
+            <div class="col-md-3">
+                <h4>News</h4>
+                <ul class="row list-unstyled">
+                    <li class="col-md-12">
+                        {% include '../post/_card_small.twig' with { post: { title: 'A Clean Water Gives More Good Taste', image: 'post-1.jpg', date: '20/04/2022' } } %}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4>Explore</h4>
+                <ul class="row list-unstyled">
+                    <li class="col-md-12">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="col-md-12">
+                        <a href="#">Our Products</a>
+                    </li>
+                    <li class="col-md-12">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex pt-3 pb-3 justify-content-between">
+                <p>© Copyright 2021 by Layerdrops.com</p>
+                <ul class="row gx-2 list-unstyled">
+                    <li class="col">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="col">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="col">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

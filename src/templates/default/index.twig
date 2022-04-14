@@ -1,0 +1,93 @@
+{% extends "../base.twig" %}
+
+{% block content %}
+    <section class="main-slider">
+        <div class="slider-home">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <h2>Test</h2>
+                        <a href="#" class="btn btn-primary">Un Bouton</a>
+                    </div>
+                    <img src="images/slide-1.jpg" alt="Slide 1">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide-2.jpg" alt="Slide 2">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/slide-3.jpg" alt="Slide 23">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-navigation-container">
+                <div class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <header class="section-header">
+                <i class="fa-solid fa-seedling"></i>
+                <h2>Our Products</h2>
+            </header>
+            <div class="row g-5 justify-content-center">
+                <article class="col-md-3">
+                    {% include '../category/_card.twig' with { category: { title: 'Fruits', excerpt: 'Discover our fruits from our beautiful orchard.', icon: 'fa-solid fa-apple-whole' } } %}
+                </article>
+                <article class="col-md-3">
+                    {% include '../category/_card.twig' with { category: { title: 'Meat', excerpt: 'We have a great selection of organic chicken.', icon: 'fa-solid fa-drumstick-bite' } } %}
+                </article>
+                <article class="col-md-3">
+                    {% include '../category/_card.twig' with { category: { title: 'Vegetables', excerpt: 'Lots of veggies!', icon: 'fa-solid fa-carrot' } } %}
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <header class="section-header">
+                <i class="fa-solid fa-newspaper"></i>
+                <h2>Latest News</h2>
+            </header>
+            <div class="row g-5">
+                <article class="col-md-3">
+                    {% include '../post/_card.twig' with { post: { title: 'A Clean Water Gives More Good Taste', image: 'post-1.jpg', date: '20/04/2022', user: 'John Doe' } } %}
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <header class="section-header">
+                <i class="fa-solid fa-users"></i>
+                <h2>Meet the farmers</h2>
+            </header>
+            <div class="row g-5">
+                <article class="col-md-3">
+                    {% include '../farmer/_card.twig' with { farmer: { firstName: 'John', lastName: 'Doe', job: 'Farmer', photo: 'farmer-1.jpg' } } %}
+                </article>
+                <article class="col-md-3">
+                    {% include '../farmer/_card.twig' with { farmer: { firstName: 'Jessica', lastName: 'Hart', job: 'Farmer', photo: 'farmer-2.jpg' } } %}
+                </article>
+                <article class="col-md-3">
+                    {% include '../farmer/_card.twig' with { farmer: { firstName: 'Jessica', lastName: 'Hart', job: 'Farmer', photo: 'farmer-3.jpg' } } %}
+                </article>
+                <article class="col-md-3">
+                    {% include '../farmer/_card.twig' with { farmer: { firstName: 'Jessica', lastName: 'Hart', job: 'Farmer', photo: 'farmer-4.jpg' } } %}
+                </article>
+            </div>
+        </div>
+    </section>
+{% endblock %}

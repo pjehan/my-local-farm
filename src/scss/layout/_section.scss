@@ -1,0 +1,22 @@
+@import "../utils/variables";
+
+.section  {
+  padding: 4rem 0;
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $secondary;
+
+    h1, h2, h3 {
+      margin-bottom: 2rem;
+    }
+
+    i[class^="fa-"] {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

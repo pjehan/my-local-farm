@@ -1,0 +1,41 @@
+@import "hover.css/scss/effects/border-transitions/underline-from-center";
+@import "animate-scss/_fading-entrances/fadeInDown";
+@import "../utils/variables";
+
+.main-header {
+  transition: background-color 0.3s ease;
+
+  &.bg-light {
+    .main-nav {
+      @include fadeInDown();
+    }
+  }
+
+  .main-nav {
+    .navbar {
+      .navbar-brand {
+        font-size: 1.5rem;
+
+        i[class^="fa-"] {
+          font-size: 2rem;
+        }
+      }
+
+      .navbar-nav {
+        font-size: 1.2rem;
+
+        .nav-link {
+          @include underline-from-center();
+          &:before {
+            height: 2px;
+          }
+
+          padding: 0;
+          margin: 0 0.5rem;
+          border-bottom: 2px solid transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
